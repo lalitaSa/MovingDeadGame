@@ -2,5 +2,5 @@
 
 ## Game handle module :video_game:
    `pip install pygame`<br>
-   `pip install pygame`<br>
-   `pip install pygame-menu -U`
+   `pip install pygame-menu -U`<br>
+   `pip install opencv-python`
