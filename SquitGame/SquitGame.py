@@ -17,7 +17,7 @@ while (cap.isOpened()): #ตั้งเพื่อให้มันรับ�
         (x, y, w, h) = cv2.boundingRect(con_ck) 
         cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 0, 255), 2)
         boxbox = cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 255, 0), 2)
-    cv2.imshow("Squid Game", frame1) #แสดงรูป    
+    cv2.imshow("Squid Game", frame1) #แสดงรูปภาพ    
     frame1 = frame2
     check , frame2 = cap.read()
     if cv2.waitKey(1) & 0xFF == ord("q"): #ถ้าปุ่มกดนี้แล้วจะปิดกล้อง
