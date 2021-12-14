@@ -82,8 +82,8 @@ def start_the_game():
         contours, hierarchy = cv2.findContours(dilation, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE) #หาเส้นตอนทัวร์
         #วาดสีเหลี่ยมในสิ่งที่กำลังขยับ
         for con_ck in contours:
-            (x, y, w, h) = cv2.boundingRect(con_ck) 
-            if cv2.contourArea(con_ck) > 1000 and iceice == True and score < 100:
+            (x, y, w, h) = cv2.boundingRect(con_ck)
+            if cv2.contourArea(con_ck) > 1000 and iceice == True and score < 1000:
                 cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 0, 255), 2)
                 boxbox = cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 0, 255), 2)
                 box_ck = True
@@ -94,21 +94,21 @@ def start_the_game():
                         score += 1
                     cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 0, 255), 2)
                     boxbox = cv2.rectangle(frame1, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        cv2.imshow("Squid Game", frame1) #แสดงรูป    
+        cv2.imshow("Squid Game", frame1) #แสดงรูป
         frame1 = frame2
         check , frame2 = cap.read()
-        
+
         if box_ck == True and score < 1000:
             sound_ov.play()
             cv2.putText(frame1, "YOU DIE", (150, 100), cv2.FONT_HERSHEY_COMPLEX, 2.5, (0, 0, 255), cv2.LINE_4)
             cv2.putText(frame1, "Press 'q' to exit the game.", (100, 400), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), cv2.LINE_4)
             die = True
-                
+
         if score >= 1000 and box_ck != True:
             sound_wn.play()
             cv2.putText(frame1, "YOU Win", (150, 100), cv2.FONT_HERSHEY_COMPLEX, 2.5, (0, 255, 0), cv2.LINE_4)
             die = True
-                
+
         if cv2.waitKey(1) & 0xFF == ord("q"): #ถ้าปุ่มกดนี้แล้วจะปิดกล้อง
             root.destroy()
             break
@@ -118,10 +118,10 @@ def start_the_game():
 
 sound_bg.set_volume(0.2)
 sound_bg.play(loops=-1)
-#ปุ่ม 
+#ปุ่ม
 button_play = Button(root,image=play_img,border=0, bg="#000", width=200, height=50, command=start_the_game).place(x=300, y=200)
-button_how_to_play = Button(root,image=how_to_play_bt, border=0, bg="#000", width=250, height=50, command=howtoplay).place(x=270, y=300)
-button_quit = Button(root,image=quit_img, border=0, bg="#000", width=200, height=50, command=exit).place(x=300, y=380)
+button_how_to_play = Button(root,image=how_to_play_bt,activebackground='black', border=0, bg="#000", width=250, height=50, command=howtoplay).place(x=270, y=300)
+button_quit = Button(root,image=quit_img, border=0, bg="#000",activebackground='black', width=200, height=50, command=exit).place(x=300, y=380)
 
 root.geometry("800x700")
 bg_main.pack()
