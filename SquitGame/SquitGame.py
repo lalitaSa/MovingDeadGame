@@ -8,6 +8,14 @@ pygame.mixer.init()
 root = Tk()
 root.title("SquitGame")
 
+
+
+
+sound_bg = pygame.mixer.Sound("sound/bg.ogg")
+sound_wn = pygame.mixer.Sound("sound/win.ogg")
+sound_ov = pygame.mixer.Sound("sound/over.ogg")
+sound_wn.set_volume(0.4)
+sound_ov.set_volume(0.4)
 background = PhotoImage(file='img\Bgg.png')
 
 bg_main = Canvas(root, bg="black", height=200, width=200)
@@ -92,11 +100,13 @@ def start_the_game():
         check , frame2 = cap.read()
         
         if box_ck == True and score < 1000:
+            sound_ov.play()
             cv2.putText(frame1, "YOU DIE", (150, 100), cv2.FONT_HERSHEY_COMPLEX, 2.5, (0, 0, 255), cv2.LINE_4)
             cv2.putText(frame1, "Press 'q' to exit the game.", (100, 400), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), cv2.LINE_4)
             die = True
                 
         if score >= 1000 and box_ck != True:
+            sound_wn.play()
             cv2.putText(frame1, "YOU Win", (150, 100), cv2.FONT_HERSHEY_COMPLEX, 2.5, (0, 255, 0), cv2.LINE_4)
             die = True
                 
@@ -107,6 +117,8 @@ def start_the_game():
     cv2.destroyAllWindows()
     pass
 
+sound_bg.set_volume(0.2)
+sound_bg.play(loops=-1)
 #ปุ่ม 
 button_play = Button(root,image=play_img,border=0, bg="#000", width=200, height=50, command=start_the_game).place(x=300, y=200)
 button_how_to_play = Button(root,image=how_to_play_bt, border=0, bg="#000", width=250, height=50, command=howtoplay).place(x=270, y=300)
