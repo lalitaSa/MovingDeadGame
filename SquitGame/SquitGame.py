@@ -10,7 +10,6 @@ root.title("SquitGame")
 
 
 
-
 sound_bg = pygame.mixer.Sound("sound/bg.ogg")
 sound_wn = pygame.mixer.Sound("sound/win.ogg")
 sound_ov = pygame.mixer.Sound("sound/over.ogg")
