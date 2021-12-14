@@ -13,7 +13,8 @@ background = PhotoImage(file='img\Bgg.png')
 bg_main = Canvas(root, bg="black", height=200, width=200)
 quit_img = PhotoImage(file='img\Quit1.png')
 play_img = PhotoImage(file='img\play.png')
-
+how_to_play_bt = PhotoImage(file='img\HTP.png')
+how_to_play_img = PhotoImage(file='img\how_to_play.png')
 
 #พืนหลังเมนูหลัก
 background_game = Label(root, image=background)
@@ -21,6 +22,18 @@ background_game.place(x=0, y=0, relwidth=1, relheigh=1)
 
 pygame.init()
 
+#หน้าต่าง HOW TO Play
+def howtoplay():
+    """สร้างหน้าต่างสอนเล่น"""
+    winn = Toplevel()
+    winn.title("HOW TO Play")
+    global how_to_play_img
+    bg_htp = Canvas(winn, bg="black", height=200, width=200)
+    background_htp = Label(winn, image=how_to_play_img)
+    background_htp.place(x=0, y=0, relwidth=1, relheigh=1)
+
+    bg_htp.pack()
+    winn.geometry("800x700")
 #ปิดหน้าต่างเมนูหลัก
 def exit():
     cv2.destroyAllWindows()
@@ -96,7 +109,8 @@ def start_the_game():
 
 #ปุ่ม 
 button_play = Button(root,image=play_img,border=0, bg="#000", width=200, height=50, command=start_the_game).place(x=300, y=200)
-button_quit = Button(root,image=quit_img, border=0, bg="#000", width=200, height=50, command=exit).place(x=300, y=260)
+button_how_to_play = Button(root,image=how_to_play_bt, border=0, bg="#000", width=250, height=50, command=howtoplay).place(x=270, y=300)
+button_quit = Button(root,image=quit_img, border=0, bg="#000", width=200, height=50, command=exit).place(x=300, y=380)
 
 root.geometry("800x700")
 bg_main.pack()
