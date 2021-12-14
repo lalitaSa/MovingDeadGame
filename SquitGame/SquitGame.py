@@ -60,7 +60,7 @@ def start_the_game():
     while (cap.isOpened()): #ตั้งเพื่อให้มันรับภาพอยู่ตลอดเวลาแล้วแสดงแบบเรียลไทม์
         if check == True:
             if num_ck >= 0 and die == False:
-                if num_ck <= 3:
+                if num_ck <= 5:
                     cv2.putText(frame1, "MOVE", (250, 50), cv2.FONT_HERSHEY_COMPLEX, 1.5, (0, 204, 255), cv2.LINE_4)
                     num_ck -= 0.1
                 else:
