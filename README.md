@@ -14,25 +14,25 @@
 สมาชิก
 <table>
 	<tr align="center">
-		<td><a href="https://github.com/wirawan05595" target="_blank"><img src="member/1.jpg" width="200" height=""></a></td>
+		<td><a href="https://github.com/wirawan05595" target="_blank"><img src="SquitGame/member/1.jpg" width="200" height=""></a></td>
 		<td>ชื่อ : นางสาววิลาวัณย์ ใจงามเลิศวงศ์	รหัสนักศึกษา</td>
 		<td>รหัสนักศึกษา : 61070209</td>
 		<td><a href="https://github.com/wirawan05595">wirawan05595</a></td>
 	</tr>
 	<tr align="center">
-		<td><a href="https://github.com/lalitaSa" target="_blank"><img src="member/2.jpg" width="200" height=""></a></td>
+		<td><a href="https://github.com/lalitaSa" target="_blank"><img src="SquitGame/member/2.jpg" width="200" height=""></a></td>
 		<td>ชื่อ : นางสาวลลิตา สอาดเหลือ	</td>
 		<td>รหัสนักศึกษา : 61070346</td>
 		<td><a href="https://github.com/lalitaSa">lalitaSa</a></td>
 	</tr>
 	<tr align="center">
-		<td><a href="https://github.com/Ekanat33" target="_blank"><img src="member/3.png" width="200" height=""></a></td>
+		<td><a href="https://github.com/Ekanat33" target="_blank"><img src="SquitGame/member/3.png" width="200" height=""></a></td>
 		<td>ชื่อ : นายเอกณัฐ หิรัญนุชนาถ</td>
 		<td>รหัสนักศึกษา : 64070118</td>
 		<td><a href="https://github.com/Ekanat33">Ekanat33</a></td>
 	</tr>
 	<tr align="center">
-		<td><a href="https://github.com/Bug9Best" target="_blank"><img src="member/4.png" width="200" height=""></a></td>
+		<td><a href="https://github.com/Bug9Best" target="_blank"><img src="SquitGame/member/4.png" width="200" height=""></a></td>
 		<td>ชื่อ : นายณัฐพล ดิษฐวิบูลย์</td>
 		<td>รหัสนักศึกษา : 64070146</td>
 		<td><a href="https://github.com/Bug9Best">Bug9Best</a></td>
